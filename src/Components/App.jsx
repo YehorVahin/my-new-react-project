@@ -2,7 +2,7 @@ import Product from './Product';
 export default function App(){
   return(
     <div>
-      <h1>Best products</h1>
+      <h1>All the best products</h1>
 
       <Product 
       name="Tacos With Lime"

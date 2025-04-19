@@ -1,5 +1,6 @@
-import "./Alert.module.css";
+
 import clsx from "clsx";
+import css from "./Alert.module.css";
 
 //   const getBgColor = variant => {
 //     switch (variant) {
@@ -17,24 +18,15 @@ import clsx from "clsx";
 //   };
   
   export const Alert = ({ variant, outlined, elevated, children }) => {
-    const classNames = ["alert", variant];
-  
-    if (outlined) {
-          classNames.push("is-outlined");
-      }
-  
-    if (elevated) {
-          classNames.push("is-elevated");
-      }
-  
-      return (
-        <p
-          className={clsx("alert", variant, {
-            "is-outlined": outlined,
-            "is-elevated": elevated,
-          })}
-        >
-          {children}
-        </p>
-      );
+    return (
+      <p
+         className={clsx(
+          css[variant],
+          outlined && css.isOutlined,
+          elevated && css.isElevated
+        )}
+      >
+        {children}
+      </p>
+    );
   };

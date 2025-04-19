@@ -1,4 +1,4 @@
-import "./Alert.css";
+import "./Alert.module.css";
 import clsx from "clsx";
 
 //   const getBgColor = variant => {
@@ -27,10 +27,14 @@ import clsx from "clsx";
           classNames.push("is-elevated");
       }
   
-    return <p  className={clsx(
-        "alert",
-        variant,
-        outlined && "is-outlined",
-        elevated && "is-elevated"
-      )}>{children}</p>;
+      return (
+        <p
+          className={clsx("alert", variant, {
+            "is-outlined": outlined,
+            "is-elevated": elevated,
+          })}
+        >
+          {children}
+        </p>
+      );
   };

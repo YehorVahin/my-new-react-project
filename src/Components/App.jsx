@@ -1,5 +1,8 @@
 import Product from './Product';
 import { Alert } from './Alert';
+import  UserMenu  from './User';
+import { LoginButton } from './Button';
+import { FollowButton } from './Button';
 export default function App(){
   return(
     <div>
@@ -27,6 +30,10 @@ export default function App(){
       <Alert variant="warning">
         Please update your profile contact information
       </Alert>
+      <UserMenu></UserMenu>
+      <LoginButton></LoginButton>
+      <FollowButton></FollowButton>
     </div>
+    
   );
 };
